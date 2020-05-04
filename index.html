@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <title>JS Game Challenge</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 <body>
     <div>
         <h1>My JS Game</h1>
+
+    <!-- Reset Start -->
         <div id="reset-container">
             <button id="reset-button">RESET</button><br>
             NUMBER OF RESETS: <span id="num-resets">0</span>
         </div>
+    <!-- Reset End -->
+
         <div class="clear"></div>
+
+    <!-- Team 1 Start -->
         <div class="left">
             <h2>
-                Team 1
+                Front-Half Kenzie
             </h2>
             <div class="goals">
                 SHOTS TAKEN: <span id="teamone-numshots">0</span><br>
                 GOALS: <span id="teamone-numgoals">0</span>
             </div>
             <div>
-                <button id="teamone-shoot-button">SHOOT</button>
+                <button id="teamone-shoot-button">SHOOT
+                </button>
+                
             </div>
         </div>
+    <!-- Team 1 End -->
+
+    <!-- Team 2 Start -->
         <div class="right">
             <h2>
-                Team 2
+                Back-Half Kenzie
             </h2>
             <div class="goals">
                 SHOTS TAKEN: <span id="teamtwo-numshots">0</span><br>
@@ -36,8 +49,17 @@
                 <button id="teamtwo-shoot-button">SHOOT</button>
             </div>
         </div>
+    <!-- Team 2 End -->
+        
+    <!-- Audio Links Start -->
+    <audio id="fhk_miss" src="assets/sounds/fhk_miss.mp3" preload="auto"></audio> 
+    <audio id="bhk_miss" src="assets/sounds/bhk_miss.mp3" preload="auto"></audio>
+    <audio id="fhk_score" src="assets/sounds/fhk_score.mp3" preload="auto"></audio>
+    <audio id="bhk_score" src="assets/sounds/bhk_score.mp3" preload="auto"></audio>
+    <!-- Audio Links End -->
+    
         <div class="clear"></div>
     </div>
-    <script src="./assets/javascript/game.js"></script>
+    <script src="./assets/javascript/game.js"></script><!-- Javascript Link -->
 </body>
 </html>

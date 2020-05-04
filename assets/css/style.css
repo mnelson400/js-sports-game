@@ -1,11 +1,14 @@
+
 .hide {
     display: none;
 }
 .left {
     float: left;
+    background-color: red;
 }
 .right {
     float: right;
+    background-color: blue;
 }
 .clear {
     clear: both;

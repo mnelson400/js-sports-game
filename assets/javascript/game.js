@@ -7,6 +7,11 @@
     // ^Declares constant variable "resetButton" = HTML button id "reset-button".
 
     resetButton.addEventListener("click", function () {
+    // ^Instructs what to do when "reset-button" is clicked.
+
+        console.log ("Reset button clicked");
+        // ^Displays "reset button clicked" in the console.
+
         const newTotal = Number (numResets.innerHTML) + 1;
         // ^Declares variable "newTotal" = number(not string) adds literal 1 to 
         //  the current value of the variable "numResets(declared on line 3)".
@@ -27,10 +32,7 @@
         team2goals.innerHTML = Number (0);
         // ^Resets the "Team 2/GOALS:" value to the number 0.
 
-        console.log ("Reset button clicked");
-        // ^Displays "reset button clicked" in the console.
-        })
-    // ^Instructs what to do when "reset-button" is clicked.
+    })
 
 // Reset Button End
 

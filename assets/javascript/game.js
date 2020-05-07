@@ -46,6 +46,10 @@
     // ^Declares the variable "team1goals" = HTML span id "teamone-numgoals".
 
     team1shoot.addEventListener("click", function () {
+    // ^Instructs what to do when "teamone-shoot-button" is clicked.
+        
+        console.log ("Team 1 shoot button clicked");
+        // ^Displays "Team 1 shoot button clicked" in the console.
         
         let team1shotTotal = Number (team1shots.innerHTML) + 1;
         // ^Declares variable "team1shotTotal" = number(not string) adds literal 1 to 
@@ -90,12 +94,8 @@
                 console.log ("Else triggered/Miss!");
                 // ^Displays "else triggered/Miss!" in the console.
             }
-        
-        console.log ("Team 1 shoot button clicked");
-        // ^Displays "Team 1 shoot button clicked" in the console.
 
     })
-    // ^Instructs what to do when "teamone-shoot-button" is clicked.
 
 // Team 1 End
 
@@ -111,6 +111,11 @@ let team2goals = document.querySelector ("#teamtwo-numgoals");
 // ^Declares the variable "team2goals" = HTML span id "teamtwo-numgoals".
 
 team2shoot.addEventListener("click", function () {
+// ^Instructs what to do when "teamtwo-shoot-button" is clicked.
+    
+    console.log ("Team 2 shoot button clicked");
+    // ^Displays "Team 2 shoot button clicked" in the console.
+
     let team2shotTotal = Number (team2shots.innerHTML) + 1;
     // ^Declares variable "team2shotTotal" = number(not string) adds literal 1 to 
     //  the current value of the variable "team2shots(declared on line 96)".
@@ -125,7 +130,7 @@ team2shoot.addEventListener("click", function () {
         if (random2goals % 2 == 0) {
         // ^If "random2goals" is an even number then:
 
-            let goal = Number (team1goals.innerHTML) + 1;
+            let goal = Number (team2goals.innerHTML) + 1;
             // ^Declares the variable "goal" = current number of goals + number 1.
 
             team2goals.innerHTML = goal;
@@ -153,11 +158,7 @@ team2shoot.addEventListener("click", function () {
             console.log ("Else triggered/Miss!");
             // ^Displays "else triggered/Miss!" in the console.
         }
-    
-    console.log ("Team 2 shoot button clicked");
-    // ^Displays "Team 2 shoot button clicked" in the console.
-    
+
 })
-// ^Instructs what to do when "teamtwo-shoot-button" is clicked.
 
 // Team 2 End

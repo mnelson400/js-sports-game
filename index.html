@@ -1,65 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-    <title>JS Game Challenge</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+    <title>Kenzie Academy Sports</title>
+    <div style="background-image: url('assets/images/crowd.png');">
+    <link rel="stylesheet" href="./assets/css/style.css"> 
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
 </head>
+
+
 <body>
-    <div>
-        <h1>My JS Game</h1>
 
-    <!-- Reset Start -->
+    <div class="controls">
+
+        <Div class="control_l">
+            
+            <div class="team_one_shoot_button"></div>
+
+            <div id="teamone-shoot-button"></div>
+
+        </Div>
+
+        <div class="control_r">
+
+            <div class="team_two_shoot_button"></div>
+
+            <div id="teamtwo-shoot-button"></div>
+
+        </div>
+            
         <div id="reset-container">
-            <button id="reset-button">RESET</button><br>
-            NUMBER OF RESETS: <span id="num-resets">0</span>
-        </div>
-    <!-- Reset End -->
 
-        <div class="clear"></div>
+            <div class="reset-button">
 
-    <!-- Team 1 Start -->
-        <div class="left">
-            <h2>
-                Front-Half Kenzie
-            </h2>
-            <div class="goals">
-                SHOTS TAKEN: <span id="teamone-numshots">0</span><br>
-                GOALS: <span id="teamone-numgoals">0</span>
-            </div>
-            <div>
-                <button id="teamone-shoot-button">SHOOT
-                </button>
-                
-            </div>
-        </div>
-    <!-- Team 1 End -->
+                <div id="reset-button"><img src="assets/images/reset_button.png" alt="Reset Button"></div>
 
-    <!-- Team 2 Start -->
-        <div class="right">
-            <h2>
-                Back-Half Kenzie
-            </h2>
-            <div class="goals">
-                SHOTS TAKEN: <span id="teamtwo-numshots">0</span><br>
-                GOALS: <span id="teamtwo-numgoals">0</span>
             </div>
-            <div>
-                <button id="teamtwo-shoot-button">SHOOT</button>
+
+            <div class="resets-qty">
+
+                <span id="num-resets">0</span>
+
             </div>
+
         </div>
-    <!-- Team 2 End -->
+
+    </div>
+
         
-    <!-- Audio Links Start -->
+
+    <div class="body">
+           
+        <div class="top"> 
+
+            <div class="scoreboard">
+
+                <div class="specs1">
+
+                    <div class="shots1">
+
+                        <span id="teamone-numshots">0</span>
+
+                    </div>
+
+                    <div class="goals1">
+
+                        <span id="teamone-numgoals">0</span>
+
+                    </div>
+
+                </div>
+
+                <div class="specs2">
+
+                    <div class="shots2">
+
+                        <span id="teamtwo-numshots">0</span>
+
+                    </div>
+
+                    <div class="goals2">
+
+                        <span id="teamtwo-numgoals">0</span>
+
+                    </div>
+                        
+                </div>
+
+            </div>
+
+        </div>    
+
+    </div>
+
     <audio id="fhk_miss" src="assets/sounds/fhk_miss.mp3" preload="auto"></audio> 
     <audio id="bhk_miss" src="assets/sounds/bhk_miss.mp3" preload="auto"></audio>
     <audio id="fhk_score" src="assets/sounds/fhk_score.mp3" preload="auto"></audio>
     <audio id="bhk_score" src="assets/sounds/bhk_score.mp3" preload="auto"></audio>
-    <!-- Audio Links End -->
-    
-        <div class="clear"></div>
-    </div>
+        
     <script src="./assets/javascript/game.js"></script><!-- Javascript Link -->
+
 </body>
 </html>

@@ -8,6 +8,23 @@
 
     resetButton.addEventListener("click", function () {
     // ^Instructs what to do when "reset-button" is clicked.
+    
+        if (Number (team1goals.innerHTML) > Number (team2goals.innerHTML)) {
+        // ^If "team1goals" is greater than "team2goals":
+
+            console.log ("team 1 wins");
+            // ^Displays "team 1 wins" in the console.
+
+            alert ("Front-Half Kenzie WINS!");
+            // ^Pop-up that says, "Front-Half Kenzie WINS!"
+
+        } else {
+            console.log ("team 2 wins");
+            // ^Displays "team 2 wins" in the console.
+
+            alert ("Back-Half Kenzie WINS!");
+            // ^Pop-up that says, "Front-Half Kenzie WINS!"
+        }
 
         console.log ("Reset button clicked");
         // ^Displays "reset button clicked" in the console.
@@ -31,7 +48,6 @@
 
         team2goals.innerHTML = Number (0);
         // ^Resets the "Team 2/GOALS:" value to the number 0.
-
     })
 
 // Reset Button End
@@ -55,20 +71,19 @@
         
         let team1shotTotal = Number (team1shots.innerHTML) + 1;
         // ^Declares variable "team1shotTotal" = number(not string) adds literal 1 to 
-        //  the current value of the variable "team1shots(declared on line 40)".
+        //  the current value of the variable "team1shots(declared on line 41)".
 
         team1shots.innerHTML = team1shotTotal;
         // ^Sets value of variable "team1shots/HTML span id teamone-numshots" =
         //  variable "team1shotTotal(declared on line 50)".
 
-        
         let random1goals = Math.floor(Math.random() * 10);
         // ^Declares variable "random1goals" = to a randomly generated number.
         
-            if (random1goals % 2 == 0) {
+            if (random1goals % 2 === 0) {
             // ^If "random1goals" is an even number then:
 
-                let goal = Number (team1goals.innerHTML) + 1;
+                let goal = Number (team1goals.innerHTML) + 2;
                 // ^Declares the variable "goal" = current number of goals + number 1.
 
                 team1goals.innerHTML = goal;
@@ -77,21 +92,14 @@
                 document.getElementById('fhk_score').play();
                 // ^Play fhk "score" sound.
 
-                // alert ("Front-Half Kenzie - Nothing but net!!!!")
-                // ^Pop-up that says, "Front-Half Kenzie - Nothing but net!!!!"
-
                 console.log ("If triggered/Great shot!");
                 // ^Displays "If triggered/Great shot!" in the console.
-            }
 
-            else {
+            } else {
             // ^If "random1goals" is an odd number then:
 
                 document.getElementById('fhk_miss').play();
                 // ^Play fhk "miss" sound.
-
-                // alert ("Front-Half Kenzie - You missed...")
-                // ^Pop-up that says, "Front-Half Kenzie - You missed..."
 
                 console.log ("Else triggered/Miss!");
                 // ^Displays "else triggered/Miss!" in the console.
@@ -129,10 +137,10 @@ team2shoot.addEventListener("click", function () {
     let random2goals = Math.floor(Math.random() * 10);
     // ^Declares variable "random2goals" = to a randomly generated number.
 
-        if (random2goals % 2 == 0) {
+        if (random2goals % 2 === 0) {
         // ^If "random2goals" is an even number then:
 
-            let goal = Number (team2goals.innerHTML) + 1;
+            let goal = Number (team2goals.innerHTML) + 2;
             // ^Declares the variable "goal" = current number of goals + number 1.
 
             team2goals.innerHTML = goal;
@@ -141,21 +149,14 @@ team2shoot.addEventListener("click", function () {
             document.getElementById('bhk_score').play();
             // ^Plays fhk "score" sound.
 
-            // alert ("Back-Half Kenzie - Nothing but net!!!!")
-            // ^Pop-up that says, "Back-Half Kenzie - Nothing but net!!!!"
-
             console.log ("If triggered/Great shot!");
             // ^Displays "If triggered/Great shot!" in the console.
-        }
-
-        else {
+            
+        } else {
         // ^If "random2goals" is an odd number then:
 
             document.getElementById('bhk_miss').play();
             // ^Plays bhk "miss" sound.
-
-            // alert ("Back-Half Kenzie - You missed...")
-            // ^Pop-up that says, "Back-Half Kenzie - You missed..."
 
             console.log ("Else triggered/Miss!");
             // ^Displays "else triggered/Miss!" in the console.
